@@ -1,0 +1,96 @@
+<mat-toolbar color="primary">
+  <span>App Personal</span>
+</mat-toolbar>
+<div class="container">
+<div class="container">
+  <div class="left"></div>
+  <div class="form-box">
+    
+    <form [formGroup]="editarForm" (ngSubmit)="enviarDatos()" >
+      <mat-card>Editar Personal</mat-card>
+    <div class="formulario">
+      
+      <div class="form-group" [style.display]="'none'">
+        <mat-form-field class="example-full-width" appearance="outline" color="accent">
+          <mat-label>Id Personal</mat-label>
+          <input matInput name="idpersonal" class="form-control" formControlName="idpersonal" >
+        </mat-form-field>
+      </div>
+    
+      <div class="form-group">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Apellido Paterno</mat-label>
+          <input matInput name="appaterno" class="form-control" formControlName="appaterno" autofocus>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Apellido Materno</mat-label>
+          <input matInput name="apmaterno" class="form-control" formControlName="apmaterno">
+        </mat-form-field>
+      </div>
+    
+      <!-- <div class="form-group">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Apellido Materno</mat-label>
+          <input matInput name="apmaterno" class="form-control" formControlName="apmaterno">
+        </mat-form-field>
+      </div> -->
+      
+      <div class="form-group">
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Primer Nombre</mat-label>
+            <input matInput name="nombre1" class="form-control" formControlName="nombre1">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Segundo Nombre</mat-label>
+          <input matInput name="nombre2" class="form-control" formControlName="nombre2">
+      </mat-form-field>
+      </div>
+    
+      <!-- <div class="form-group">
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Segundo Nombre</mat-label>
+            <input matInput name="nombre2" class="form-control" formControlName="nombre2">
+        </mat-form-field>
+        
+      </div> -->
+      <div class="form-group" style="display: none;">
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Nombre Completo</mat-label>
+            <input matInput name="nombrecompleto" class="form-control" formControlName="nombrecompleto">
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Dni</mat-label>
+            <input matInput name="dni" class="form-control" formControlName="dni">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Fecha Nac</mat-label>
+          <input matInput name="fchnac" class="form-control" formControlName="fchnac">
+      </mat-form-field>
+      </div>
+<!--       
+      <div class="form-group">
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Fecha Nac</mat-label>
+            <input matInput name="fchnac" class="form-control" formControlName="fchnac">
+        </mat-form-field>
+      </div> -->
+      <div class="form-group">
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Fecha Ingreso</mat-label>
+            <input matInput name="fchingreso" class="form-control" formControlName="fchingreso">
+        </mat-form-field>
+      </div>
+    </div>
+      <div class="form-group btns">
+        <button mat-stroked-button type="button" (click)="cancel()">Cancelar</button>
+        <button type="submit" mat-flat-button color="primary">Aceptar</button>
+      </div>
+    
+        
+    </form>
+    
+    </div>
+  </div>

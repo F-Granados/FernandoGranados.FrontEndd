@@ -1,0 +1,71 @@
+<h2>Crear Personal</h2>
+<form #form="ngForm" (submit)="insertarPersonal(form)" class="form" autocomplete="off">
+  <div class="form-group">
+    <mat-form-field class="example-full-width" appearance="legacy">
+      <mat-label>Apellido Paterno</mat-label>
+      <input matInput name="appaterno" #appaterno="ngModel" [(ngModel)]="personalservice.formData.appaterno" class="form-control" autocomplete="off" required>
+    </mat-form-field>
+  </div>
+    
+  <div class="form-group">
+    <mat-form-field class="example-full-width" appearance="legacy">
+        <mat-label>Apellido Materno</mat-label>
+        <input matInput name="apmaterno" #apmaterno="ngModel" [(ngModel)]="personalservice.formData.apmaterno" class="form-control" autocomplete="off" required>
+    </mat-form-field>
+  </div>
+
+  <div class="form-group">
+    <mat-form-field class="example-full-width" appearance="legacy">
+        <mat-label>Primer Nombre</mat-label>
+        <input matInput name="nombre1" #nombre1="ngModel" [(ngModel)]="personalservice.formData.nombre1" class="form-control" autocomplete="off" required>
+    </mat-form-field>
+  </div>
+
+  <div class="form-group">
+    <mat-form-field class="example-full-width" appearance="legacy">
+        <mat-label>Segundo Nombre</mat-label>
+        <input matInput name="nombre2" #nombre2="ngModel" [(ngModel)]="personalservice.formData.nombre2" class="form-control" autocomplete="off" required>
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <mat-form-field class="example-full-width" appearance="legacy">
+        <mat-label>Dni</mat-label>
+        <input matInput name="Dni" #nombre2="ngModel" [(ngModel)]="personalservice.formData.Dni" class="form-control" autocomplete="off" required>
+    </mat-form-field>
+  </div>
+  <div class="form-group" style="display: none;">
+    <mat-form-field class="example-full-width" appearance="legacy">
+        <mat-label>Nombre Completo</mat-label>
+        <input matInput name="nombrecompleto" #nombrecompleto="ngModel" [(ngModel)]="personalservice.formData.nombrecompleto" class="form-control">
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <mat-form-field appearance="legacy" class="example-form-field">
+        <mat-label>Fecha de Nacimiento</mat-label>
+        <input matInput [matDatepicker]="datepicker" name="fchnac" #fchnac="ngModel" [(ngModel)]="personalservice.formData.fchnac" class="form-control"required>
+        <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+        <mat-datepicker #datepicker>
+          <mat-datepicker-actions>
+            <button mat-button matDatepickerCancel>Cancelar</button>
+            <button mat-raised-button color="primary" matDatepickerApply>Aceptar</button>
+          </mat-datepicker-actions>
+        </mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <mat-form-field appearance="legacy" class="example-form-field">
+        <mat-label>Fecha de Ingreso</mat-label>
+        <input matInput [matDatepicker]="datepicker2" name="fchingreso" #fchingreso="ngModel" [(ngModel)]="personalservice.formData.fchingreso" class="form-control">
+        <mat-datepicker-toggle matSuffix [for]="datepicker2"></mat-datepicker-toggle>
+        <mat-datepicker #datepicker2>
+          <mat-datepicker-actions>
+            <button mat-button matDatepickerCancel>Cancelar</button>
+            <button mat-raised-button color="primary" matDatepickerApply>Aceptar</button>
+          </mat-datepicker-actions>
+        </mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="form-group"><button type="button" mat-stroked-button (click)="cancelar()">Cancelar</button></div>
+  <div class="form-group"><button type="submit" mat-flat-button color="primary" >Aceptar</button></div>
+    
+</form>

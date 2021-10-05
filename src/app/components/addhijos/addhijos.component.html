@@ -1,0 +1,69 @@
+<mat-toolbar color="primary">
+  <span>App Personal</span>
+</mat-toolbar>
+<div class="container">
+
+<h2>Crear Personal</h2>
+<form #form="ngForm" (submit)="insertarHijos(form)" class="form">
+  <div class="form-group">
+    <mat-form-field class="example-full-width" appearance="legacy">
+      <mat-label>Id Padre</mat-label>
+      <input matInput name="idpersonal" #idpersonal="ngModel" [(ngModel)]="hijoservice.formData.idpersonal" class="form-control">
+    </mat-form-field>
+  </div>
+
+  <div class="form-group">
+    <mat-form-field class="example-full-width" appearance="legacy">
+      <mat-label>Apellido Paterno</mat-label>
+      <input matInput name="appaterno" #appaterno="ngModel" [(ngModel)]="hijoservice.formData.appaterno" class="form-control">
+    </mat-form-field>
+  </div>
+    
+  <div class="form-group">
+    <mat-form-field class="example-full-width" appearance="legacy">
+        <mat-label>Apellido Materno</mat-label>
+        <input matInput name="apmaterno" #apmaterno="ngModel" [(ngModel)]="hijoservice.formData.apmaterno" class="form-control">
+    </mat-form-field>
+  </div>
+
+  <div class="form-group">
+    <mat-form-field class="example-full-width" appearance="legacy">
+        <mat-label>Primer Nombre</mat-label>
+        <input matInput name="nombre1" #nombre1="ngModel" [(ngModel)]="hijoservice.formData.nombre1" class="form-control">
+    </mat-form-field>
+  </div>
+
+  <div class="form-group">
+    <mat-form-field class="example-full-width" appearance="legacy">
+        <mat-label>Segundo Nombre</mat-label>
+        <input matInput name="nombre2" #nombre2="ngModel" [(ngModel)]="hijoservice.formData.nombre2" class="form-control">
+    </mat-form-field>
+  </div>
+  <div class="form-group" style="display: none;">
+    <mat-form-field class="example-full-width" appearance="legacy">
+        <mat-label>Nombre Completo</mat-label>
+        <input matInput name="nombrecompleto" #nombrecompleto="ngModel" [(ngModel)]="hijoservice.formData.nombrecompleto" class="form-control">
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <mat-form-field appearance="legacy" class="example-form-field">
+        <mat-label>Fecha de Nacimiento</mat-label>
+        <input matInput [matDatepicker]="datepicker" name="fchnac" #fchnac="ngModel" [(ngModel)]="hijoservice.formData.fchnac" class="form-control">
+        <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+        <mat-datepicker #datepicker>
+          <mat-datepicker-actions>
+            <button mat-button matDatepickerCancel>Cancelar</button>
+            <button mat-raised-button color="primary" matDatepickerApply>Aceptar</button>
+          </mat-datepicker-actions>
+        </mat-datepicker>
+    </mat-form-field>
+  </div>
+  
+  <div class="form-group"><button type="button" mat-stroked-button (click)="cancelar()">Cancelar</button></div>
+  <div class="form-group"><button type="submit" mat-flat-button color="primary">Aceptar</button></div>
+    
+</form>
+
+
+
+

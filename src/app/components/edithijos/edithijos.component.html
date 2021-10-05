@@ -1,0 +1,72 @@
+<mat-toolbar color="primary">
+  <span>App Personal</span>
+</mat-toolbar>
+
+   
+<div class="container">
+  <mat-card>Editar Hijo</mat-card>
+  <br>
+   
+    <form [formGroup]="editarForm" (ngSubmit)="enviarDatos()" class="formulario" autocomplete="off">
+      <div class="form-group">
+        <mat-form-field class="example-full-width" appearance="legacy">
+          <mat-label>Id Hijo</mat-label>
+          <input matInput name="idderhab" class="form-control" formControlName="idderhab">
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field class="example-full-width" appearance="legacy">
+          <mat-label>Id Personal</mat-label>
+          <input matInput name="idpersonal" class="form-control" formControlName="idpersonal">
+        </mat-form-field>
+      </div>
+    
+      <div class="form-group">
+        <mat-form-field class="example-full-width" appearance="legacy">
+          <mat-label>Apellido Paterno</mat-label>
+          <input matInput name="appaterno" class="form-control" formControlName="appaterno">
+        </mat-form-field>
+      </div>
+    
+      <div class="form-group">
+        <mat-form-field class="example-full-width" appearance="legacy">
+          <mat-label>Apellido Materno</mat-label>
+          <input matInput name="apmaterno" class="form-control" formControlName="apmaterno">
+        </mat-form-field>
+      </div>
+      
+      <div class="form-group">
+        <mat-form-field class="example-full-width" appearance="legacy">
+            <mat-label>Primer Nombre</mat-label>
+            <input matInput name="nombre1" class="form-control" formControlName="nombre1">
+        </mat-form-field>
+      </div>
+    
+      <div class="form-group">
+        <mat-form-field class="example-full-width" appearance="legacy">
+            <mat-label>Segundo Nombre</mat-label>
+            <input matInput name="nombre2" class="form-control" formControlName="nombre2">
+        </mat-form-field>
+      </div>
+      <div class="form-group" style="display: none;">
+        <mat-form-field class="example-full-width" appearance="legacy">
+            <mat-label>Nombre Completo</mat-label>
+            <input matInput name="nombrecompleto" class="form-control" formControlName="nombrecompleto">
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field class="example-full-width" appearance="legacy">
+            <mat-label>Fecha Nac</mat-label>
+            <input matInput name="fchnac" class="form-control" formControlName="fchnac">
+        </mat-form-field>
+      </div>
+      <div class="form-group btns">
+        <button mat-stroked-button>Cancelar</button>
+        <button type="submit" mat-flat-button color="primary">Aceptar</button>
+      </div>
+            
+        
+    </form>
+    
+    </div>

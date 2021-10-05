@@ -1,0 +1,70 @@
+.container{
+    min-width: 100%;
+    min-height: 100%;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+table {
+    width: 100%;
+  }
+  
+.mat-form-field {
+  font-size: 14px;
+  width: 90%;
+}
+.table-container{
+  width: 90%;
+}
+.pointer{
+  cursor: pointer;
+  padding: 0 10px 0 0;
+  text-decoration: underline;
+}
+.td_acciones{
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  align-items: flex-end !important;
+  
+}
+.filter_add .input{
+  width: 40% !important;
+  
+}
+.filter_add{
+  width: 100%;
+  display: flex;
+  
+  justify-content: space-between;
+  align-items: center;
+}
+.filter_add button{
+  
+  text-align: right;
+  height: 50px;
+}
+
+.filter_add .btns{
+
+  font-size: 14px;
+  margin-left: 12px;
+  min-width: 120px;
+  width: 25%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btns{
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 20px;
+  min-width: 120px;
+}
